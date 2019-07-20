@@ -1,0 +1,32 @@
+{
+  "name": "tweet-verifier",
+  "version": "0.0.1",
+  "description": "Check if Tweets are real",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor95pc/tweet-verifier.git"
+  },
+  "keywords": [
+    "twitter-api",
+    "tweets",
+    "fake",
+    "verifier",
+    "chrome-extension",
+    "firefox-extension",
+    "firefox-addon"
+  ],
+
+  "contributors": [
+    "Victor Castro (https://github.com/victor95pc)",
+    "Miguel Castro (https://github.com/miguelpc94)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victor95pc/tweet-verifier/issues"
+  },
+  "homepage": "https://github.com/victor95pc/tweet-verifier#readme"
+}
