@@ -7,7 +7,8 @@
     "chrome-build": "NODE_ENV=production webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
     "chrome-start": "NODE_ENV=development webpack --config src/chrome/webpack.config.js --watch",
     "test": "node_modules/.bin/jest",
-    "test:coverage": "npm test -- --coverage"
+    "test:coverage": "npm test -- --coverage",
+    "coveralls": "npm run test:coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "babel-loader": "^8.0.6",
     "base64-inline-loader": "^1.1.1",
     "copy-webpack-plugin": "^5.0.3",
+    "coveralls": "^3.0.5",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
