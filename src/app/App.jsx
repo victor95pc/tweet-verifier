@@ -1,5 +1,5 @@
 import React from 'react';
-import wasmCode from "./test.wasm"
+import wasmCode from './test.wasm';
 
 const App = () => {
   const wasmModule = new WebAssembly.Module(wasmCode);
@@ -8,9 +8,12 @@ const App = () => {
 
   return (
     <>
-      <div>Olax: {wasmResult}</div>
+      <div>
+        WA Result:
+        {wasmResult}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default App;
