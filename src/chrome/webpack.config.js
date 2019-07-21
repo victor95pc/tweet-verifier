@@ -34,6 +34,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.wasm$/,
+        loaders: ['wasm-loader']
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
         use: {
