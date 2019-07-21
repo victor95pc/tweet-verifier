@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "chrome-build": "RELOAD=false webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
-    "chrome-start": "RELOAD=true webpack-dev-server --config src/chrome/webpack.config.js --env.NODE_ENV=production"
+    "chrome-build": "NODE_ENV=production webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
+    "chrome-start": "NODE_ENV=development webpack --config src/chrome/webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -31,16 +31,20 @@
   },
   "homepage": "https://github.com/victor95pc/tweet-verifier#readme",
   "dependencies": {
-    "html2canvas": "^1.0.0-rc.3"
+    "document-ready": "^2.0.2",
+    "html2canvas": "^1.0.0-rc.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "arraybuffer-loader": "^1.0.7",
     "babel-loader": "^8.0.6",
+    "base64-inline-loader": "^1.1.1",
     "copy-webpack-plugin": "^5.0.3",
     "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-cli": "^3.3.6"
   }
 }
