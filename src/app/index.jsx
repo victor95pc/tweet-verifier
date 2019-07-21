@@ -1,9 +1,10 @@
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import OnPageReady from 'document-ready';
 import App from './App';
 
-const ID = 'tweet-verifier-react-app';
+export const ID = 'tweet-verifier-react-app';
 
 const addDivContainerIfNeeded = () => {
   let container = document.getElementById(ID);
@@ -21,8 +22,10 @@ const addDivContainerIfNeeded = () => {
   return container;
 };
 
-OnPageReady(() => {
+export const renderApp = () => {
   const container = addDivContainerIfNeeded();
 
   ReactDOM.render(<App />, container);
-});
+};
+
+OnPageReady(renderApp);
