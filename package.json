@@ -2,9 +2,11 @@
   "name": "tweet-verifier",
   "version": "0.0.1",
   "description": "Check if Tweets are real",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "chrome-build": "RELOAD=false webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
+    "chrome-start": "RELOAD=true webpack-dev-server --config src/chrome/webpack.config.js --env.NODE_ENV=production"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,6 @@
     "firefox-extension",
     "firefox-addon"
   ],
-
   "contributors": [
     "Victor Castro (https://github.com/victor95pc)",
     "Miguel Castro (https://github.com/miguelpc94)"
@@ -28,5 +29,17 @@
   "bugs": {
     "url": "https://github.com/victor95pc/tweet-verifier/issues"
   },
-  "homepage": "https://github.com/victor95pc/tweet-verifier#readme"
+  "homepage": "https://github.com/victor95pc/tweet-verifier#readme",
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.3",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
 }
