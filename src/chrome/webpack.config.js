@@ -35,7 +35,8 @@ module.exports = {
     rules: [
       {
         test: /\.wasm$/,
-        loaders: ['wasm-loader']
+        use: { loader: 'arraybuffer-loader' },
+        type: 'javascript/auto',
       },
       {
         test: /\.(js|jsx)$/,
