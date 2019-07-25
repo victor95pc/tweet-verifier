@@ -1,64 +1,66 @@
 {
-  "name": "tweet-verifier",
-  "version": "0.0.1",
-  "description": "Check if Tweets are real",
-  "main": "src/index.js",
-  "scripts": {
-    "chrome-build": "NODE_ENV=production webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
-    "chrome-start": "NODE_ENV=development webpack --config src/chrome/webpack.config.js --watch",
-    "test": "node_modules/.bin/jest",
-    "test:coverage": "npm test -- --coverage",
-    "coveralls": "npm run test:coverage && cat ./coverage/lcov.info | coveralls"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/victor95pc/tweet-verifier.git"
-  },
-  "keywords": [
-    "twitter-api",
-    "tweets",
-    "fake",
-    "verifier",
-    "chrome-extension",
-    "firefox-extension",
-    "firefox-addon"
-  ],
-  "contributors": [
-    "Victor Castro (https://github.com/victor95pc)",
-    "Miguel Castro (https://github.com/miguelpc94)"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/victor95pc/tweet-verifier/issues"
-  },
-  "homepage": "https://github.com/victor95pc/tweet-verifier#readme",
-  "dependencies": {
-    "document-ready": "^2.0.2",
-    "html2canvas": "^1.0.0-rc.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "arraybuffer-loader": "^1.0.7",
-    "babel-jest": "^24.8.0",
-    "babel-loader": "^8.0.6",
-    "base64-inline-loader": "^1.1.1",
-    "copy-webpack-plugin": "^5.0.3",
-    "coveralls": "^3.0.5",
-    "cross-env": "^5.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2",
-    "jest": "^24.8.0",
-    "jest-raw-loader": "github:keplersj/jest-raw-loader",
-    "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6"
-  }
+	"name": "tweet-verifier",
+	"version": "0.0.1",
+	"description": "Check if Tweets are real",
+	"main": "src/index.js",
+	"scripts": {
+		"chrome-build": "NODE_ENV=production webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
+		"chrome-start": "NODE_ENV=development webpack --config src/chrome/webpack.config.js --watch",
+		"test": "node_modules/.bin/jest",
+		"test:coverage": "npm test -- --coverage",
+		"coveralls": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
+		"chrome-build-windows": "webpack --env.NODE_ENV=production --config src/chrome/webpack.config.js",
+		"chrome-start-windows": "webpack --config src/chrome/webpack.config.js --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/victor95pc/tweet-verifier.git"
+	},
+	"keywords": [
+		"twitter-api",
+		"tweets",
+		"fake",
+		"verifier",
+		"chrome-extension",
+		"firefox-extension",
+		"firefox-addon"
+	],
+	"contributors": [
+		"Victor Castro (https://github.com/victor95pc)",
+		"Miguel Castro (https://github.com/miguelpc94)"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/victor95pc/tweet-verifier/issues"
+	},
+	"homepage": "https://github.com/victor95pc/tweet-verifier#readme",
+	"dependencies": {
+		"document-ready": "^2.0.2",
+		"html2canvas": "^1.0.0-rc.3",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"arraybuffer-loader": "^1.0.7",
+		"babel-jest": "^24.8.0",
+		"babel-loader": "^8.0.6",
+		"base64-inline-loader": "^1.1.1",
+		"copy-webpack-plugin": "^5.0.3",
+		"coveralls": "^3.0.5",
+		"cross-env": "^5.2.0",
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.14.0",
+		"eslint": "^5.3.0",
+		"eslint-config-airbnb": "^17.1.1",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.14.2",
+		"jest": "^24.8.0",
+		"jest-raw-loader": "github:keplersj/jest-raw-loader",
+		"webpack": "^4.36.1",
+		"webpack-cli": "^3.3.6"
+	}
 }
